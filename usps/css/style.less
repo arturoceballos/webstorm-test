@@ -1,3 +1,13 @@
+@opaque-blue: hsla(209, 76%, 61%, 0.5);
+@regular-blue: hsla(209, 76%, 61%, 1);
+@grey: #444;
+
+.border-with-radius(@borderWidth, @color, @radius, @background){
+  border: @borderWidth, solid, @color;
+  border-radius: @radius;
+  background-color: @background;
+}
+
 body {
   .primary-text;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,10 +31,10 @@ header {
     text-align: center;
     padding: 20px 0;
     a {
-      color: hsla(209, 76%, 61%, 0.5);
+      color: @opaque-blue;
       transition: color 400ms ease-in-out;
       &:hover {
-        color: hsla(209, 76%, 61%, 1);
+        color: @regular-blue;
       }
     }
   }
@@ -48,10 +58,11 @@ main {
     position: absolute;
     left: 15%;
     top: 20px;
-    border-radius: 50%;
+    .border-with-radius(1px, @grey, 50%, #aeaeae);
+//    border-radius: 50%;
     padding: 10px;
-    background-color: #aeaeae;
-    border: 1px solid #444;
+//    background-color: #aeaeae;
+//    border: 1px solid #444;
     transition: all 1000ms ease-in-out;
     &:hover {
       left: 5%;
