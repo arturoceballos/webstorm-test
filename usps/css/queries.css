@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+  header li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  .hero {
+    height: 150px;
+  }
+  main img {
+    display: none;
+  }
+  main article {
+    float: none;
+    width: 90%;
+    margin: 0 5% 20px;
+    padding: 0 5% 20px;
+  }
+  main article:before {
+    height: 75px;
+    top: -75px;
+  }
+}
